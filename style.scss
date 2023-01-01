@@ -1,0 +1,178 @@
+/** @format */
+@use "sass:color";
+
+@mixin for-tablet-up {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin for-upper-breakpoint {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+$color-primary: hsl(179, 62%, 43%);
+$color-primary-2: hsl(71, 73%, 54%);
+$color-gray: hsl(218, 22%, 67%);
+$color-primary-light: color.scale($color-primary, $lightness: 7%);
+
+.color-primary {
+  color: $color-primary;
+}
+
+.color-primary-2 {
+  color: $color-primary-2;
+}
+
+.color-primary-lighten {
+  color: $color-primary-light;
+}
+
+.color-gray {
+  color: hsl(218, 22%, 67%);
+}
+
+.color-gray-2 {
+  color: hsl(204, 43%, 93%);
+}
+
+.color-white {
+  color: #fff;
+}
+
+.bg.primary {
+  background: $color-primary;
+}
+
+.bg-primary-2 {
+  background: $color-primary-2;
+}
+
+.bg-primary-lighten {
+  background: $color-primary-light;
+}
+
+.text-big {
+  font-size: 26px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background: hsl(204, 43%, 93%);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  margin: auto 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 600px;
+
+  @include for-tablet-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-upper-breakpoint {
+    margin: 50px auto;
+  }
+}
+header {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.article {
+  padding: 20px 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  & .content {
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  & .lead {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  @include for-tablet-up {
+    grid-column: 1 / span 2;
+    padding-right: 80px;
+  }
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: hsl(179, 62%, 43%);
+
+  & .lead {
+    display: flex;
+    align-items: center;
+  }
+
+  & .content {
+    padding-top: 5px;
+    font-size: 14px;
+  }
+
+  & button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 6px 6px 6px 6px;
+    border: none;
+    text-decoration: none;
+    max-width: 210px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+
+     &:hover {
+      background: color.scale($color-primary-2, $lightness: -15%);
+     }
+  }
+
+  @include for-tablet-up {
+    border-radius: 0 0 0 6px;
+  }
+}
+
+.key-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 0 0 6px 6px;
+  & ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  @include for-tablet-up {
+    border-radius: 0 0 6px 0;
+  }
+}
+
+.margin-top {
+  margin-top: 20px;
+}

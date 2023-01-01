@@ -1,0 +1,160 @@
+/** @format */
+.color-primary {
+  color: hsl(179deg, 62%, 43%);
+}
+
+.color-primary-2 {
+  color: hsl(71deg, 73%, 54%);
+}
+
+.color-primary-lighten {
+  color: #2ec2c0;
+}
+
+.color-gray {
+  color: hsl(218deg, 22%, 67%);
+}
+
+.color-gray-2 {
+  color: hsl(204deg, 43%, 93%);
+}
+
+.color-white {
+  color: #fff;
+}
+
+.bg.primary {
+  background: hsl(179deg, 62%, 43%);
+}
+
+.bg-primary-2 {
+  background: hsl(71deg, 73%, 54%);
+}
+
+.bg-primary-lighten {
+  background: #2ec2c0;
+}
+
+.text-big {
+  font-size: 26px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background: hsl(204deg, 43%, 93%);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  margin: auto 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 600px;
+}
+@media screen and (min-width: 375px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 600px) {
+  .container {
+    margin: 50px auto;
+  }
+}
+
+header {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.article {
+  padding: 20px 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main .content {
+  line-height: 1.6;
+  font-size: 14px;
+}
+.main .lead {
+  font-weight: 600;
+  font-size: 14px;
+}
+@media screen and (min-width: 375px) {
+  .main {
+    grid-column: 1/span 2;
+    padding-right: 80px;
+  }
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: hsl(179deg, 62%, 43%);
+}
+.signup .lead {
+  display: flex;
+  align-items: center;
+}
+.signup .content {
+  padding-top: 5px;
+  font-size: 14px;
+}
+.signup button {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 6px 6px 6px 6px;
+  border: none;
+  text-decoration: none;
+  max-width: 210px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.signup button:hover {
+  background: #abca20;
+}
+@media screen and (min-width: 375px) {
+  .signup {
+    border-radius: 0 0 0 6px;
+  }
+}
+
+.key-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 0 0 6px 6px;
+}
+.key-points ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 375px) {
+  .key-points {
+    border-radius: 0 0 6px 0;
+  }
+}
+
+.margin-top {
+  margin-top: 20px;
+}/*# sourceMappingURL=style.css.map */
